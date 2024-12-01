@@ -1,6 +1,6 @@
 export const useTheme = () => {
-  const themeTarget = document.querySelector("[data-theme]");
-  const themeSwitcher = document.querySelector("[data-theme-switcher]");
+  const themeTarget = document.querySelector('[data-theme]');
+  const themeSwitcher = document.querySelector('[data-theme-switcher]');
 
   const themeTargetDataset = themeTarget.dataset;
 
@@ -11,14 +11,14 @@ export const useTheme = () => {
     themeSwitcher.checked = true;
   }
 
-  themeSwitcher.addEventListener("click", () => {
+  themeSwitcher.addEventListener('click', () => {
     
-    if (themeTargetDataset.theme === "light") {
-      themeTargetDataset.theme = "dark";
-      localStorage.setItem("theme", "dark");
+    if (themeTargetDataset.theme === 'light') {
+      themeTargetDataset.theme = 'dark';
+      localStorage.setItem('theme', 'dark');
     } else {
-      themeTargetDataset.theme = "light";
-      localStorage.setItem("theme", "light");
+      themeTargetDataset.theme = 'light';
+      localStorage.setItem('theme', 'light');
     }
   });
 };
